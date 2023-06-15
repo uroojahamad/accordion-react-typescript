@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Accordion from './components/Accordion';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Accordion 
+        title='The Flash'
+        content='After being struck by lightning, Barry Allen wakes up from his coma to discover he been given the power of super speed, becoming the Flash'
+      />
+      <Accordion 
+        title='Spiderman'
+        content='Peter Parker then attains spider-like qualities such as genius-level intellect, superb scientist and inventor, superhuman strength, speed, durability, and agility, he has the ability to cling to most surfaces, precognitive spider-sense, and his wrist as web-shooters.'
+      />
+      <Accordion 
+        title='Ironman'
+        content='A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist.'
+      />
+    </>
   );
 }
 
