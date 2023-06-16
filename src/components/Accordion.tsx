@@ -1,15 +1,17 @@
 import React, {useState} from 'react'
-type AccordianData = {
-  title: string,
-  content: string
-}
 
-const Accordion = (props : AccordianData) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const {title, content} = props;
+type AccordionProps = {
+  title: String;
+  description: String;
+  isOpen: boolean;
+  handleAccordionClick: (index: number) => void;
+  index: number;
+};
 
+const Accordion = (props : AccordionProps) => {
+  const { title, description, isOpen, handleAccordionClick, index } = props;
   const toggleAccordion = () => {
-    setIsOpen(prevState => !prevState);
+    handleAccordionClick(index);
   };
 
   return (
@@ -22,7 +24,7 @@ const Accordion = (props : AccordianData) => {
         </div>
         {isOpen && <div>
             <p className='p-3 text-xl'>
-              {content}
+              {description}
             </p>
         </div>}
     </div>
