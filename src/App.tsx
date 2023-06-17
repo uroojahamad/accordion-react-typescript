@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import Accordion from './components/Accordion';
+import PhoneNumber from './components/PhoneNumber';
 
 type ObjectType = {
   title: String;
@@ -50,6 +51,8 @@ function App() {
           handleAccordionClick={handleAccordionClick}
         />
       ))}
+
+      <PhoneNumber />
     </>
   );
 }
