@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import Accordion from './components/Accordion';
-import PhoneNumber from './components/PhoneNumber';
 
 type ObjectType = {
   title: String;
@@ -27,6 +26,7 @@ const accordionInfo : ArrayType= [
 ];
 
 function App() {
+  
   const [openIndex, setOpenIndex] = useState(-1);
   const handleAccordionClick = (index: number) => {
     setOpenIndex((prevIndex) => {
@@ -39,6 +39,7 @@ function App() {
       }
     });
   };
+
   return (
     <>
       {accordionInfo.map((item, index) => (
@@ -51,8 +52,6 @@ function App() {
           handleAccordionClick={handleAccordionClick}
         />
       ))}
-
-      <PhoneNumber />
     </>
   );
 }
